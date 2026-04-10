@@ -1,0 +1,29 @@
+# =============================================================
+# AI 目标检测系统 - Python 依赖
+# 适用于: backend/main.py 与 fastapi_app.py
+# =============================================================
+
+# ----- Web 框架 -----
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+starlette>=0.27.0          # FastAPI 依赖，静态文件/中间件
+
+# ----- 文件上传与 HTTP -----
+python-multipart>=0.0.6    # FastAPI UploadFile 必需
+httpx>=0.25.0              # 后端异步请求 AI 推理服务器
+
+# ----- AI 推理 -----
+ultralytics>=8.0.0         # RT-DETR / YOLO 模型加载与推理
+
+# ----- Supabase 集成 -----
+supabase>=2.0.0            # Supabase Python SDK
+postgrest>=0.16.0          # Supabase 底层依赖
+gotrue>=2.0.0              # Supabase Auth 底层依赖
+storage3>=0.8.0            # Supabase Storage 底层依赖
+realtime>=1.0.0            # Supabase 实时订阅（可选）
+
+# ----- 环境变量 -----
+python-dotenv>=1.0.0
+
+# ----- 常用工具 -----
+pydantic>=2.0.0            # FastAPI 数据校验
